@@ -127,10 +127,9 @@ console.log(sum(1, 2, 3, 4));
 // };
 
 let objectLit = () => ({  
-key1: 'value1',
-key2: 'value2',
-key3: 'value3',})
-
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',})
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
 
@@ -140,7 +139,7 @@ console.log(objectLit());
 //   let product = a * b;
 //   return [sum, product];
 // };
- let sumAndProduct = (a, b) => `${a + b} ${a * b}`
+let sumAndProduct = (a, b) => `${a + b} ${a * b}`
 
 
 // TODO: Uncomment the following line of code to see the output in the browser console
@@ -162,7 +161,6 @@ let Student = function(name, age, hometown) {
   this.age = age;
   this.hometown = hometown;
 };
-
 // let Student = (name, age, hometown) => 
 // {   this.name = name;
 //     this.age = age;
@@ -209,11 +207,12 @@ Student.prototype.scopeArrow = () => console.log(this);
 console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
-// 1. What is "this" when joe.scope() is invoked?
-//  this is the instance of method scope () of Student object
-//
+// 1. What is "this" when joe.scope() is invoked? 
+// When joe.scope is invoked, this referse to the object of joe
+
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//  this is the instance  of method scopeArrow () of Student object
+// When scopeArrow is invoked, this refers to the window.
+
 // 3. Explain why "this" is different when an arrow function is used.
-// Something to do with the scope of arrow functions <I am guessing>
-//
+// because arrow functions raise the scope of the function to the next level up.
+
